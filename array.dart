@@ -16,6 +16,9 @@ void main(){
    listOfApps.sort();
 
    print('Ascending order (A to Z): $listOfApps');
+   print('Descending order (Z to A): ${listOfApps.reversed}');
+   var appNamesCount = listOfApps.length;
+   print("count : ${appNamesCount}");
 
 }
 
