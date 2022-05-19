@@ -10,7 +10,7 @@
 // FNB banking app 2012
 
 void main(){
- var listOfApps=["Ambani Africa", "EasyEquities"," Naked insure","Khula ecosystem","Shyft","Domestly", "Gumdrop","LIVE Inspect","SnapScan","FNB banking app" ];
+ var listOfApps=["Ambani Africa", "EasyEquities","Naked insure","Khula ecosystem","Shyft","Domestly", "Gumdrop","LIVE Inspect","SnapScan","FNB banking app" ];
    print("List of Apps $listOfApps");
   
    listOfApps.sort();
