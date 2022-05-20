@@ -1,25 +1,55 @@
-// Ambani Africa- Mukundi Lambani 2021
-// EasyEquities 2020
-// Naked insure 2019- insureteck startup
-// Khula ecosystem 2018- karidas Tshintsholo
-// Shyft 2017
-// Domestly 2016 -cleaning-on-demand startup
-// Gumdrop 2015 Simon hurtle
-// LIVE Inspect- 2014
-// SnapScan 2013
-// FNB banking app 2012
-
 void main(){
- var listOfApps=["Ambani Africa", "EasyEquities","Naked insure","Khula ecosystem","Shyft","Domestly", "Gumdrop","LIVE Inspect","SnapScan","FNB banking app" ];
-   print("List of Apps $listOfApps");
   
-   listOfApps.sort();
+   List<AppOfTheYear> appList = [
+   AppOfTheYear(name: 'Ambani Africa', year: '2021' ),
+   AppOfTheYear(name: 'EasyEquities', year:'2020' ),
+   AppOfTheYear(name: 'Naked insure', year:'2019'),
+   AppOfTheYear(name: 'Khula ecosystem', year:'2018'),
+   AppOfTheYear(name: 'Shyft', year:'2017'),
+   AppOfTheYear(name: 'Domestly',year:'2016' ),
+   AppOfTheYear(name: 'Wumdrop', year:'2015' ),
+   AppOfTheYear(name: 'LIVE Inspect', year:'2014'),
+   AppOfTheYear(name: 'SnapScan',year:'2013'),
+   AppOfTheYear(name: 'FNB banking app', year:'2012')
+ ];
+  
+   // YearWon from lowest to highest
+  appList.sort((a,b) => a.name.compareTo(b.name));
+  appList.forEach((app) => {
+   
+    print(app.name)
+  });
+  
+   
+   print("2017 and 2018 App of the year: ");
+  
+  
+     print(appList.map((app) {
 
-   print('Ascending order (A to Z): $listOfApps');
-   print('Descending order (Z to A): ${listOfApps.reversed}');
-   var appNamesCount = listOfApps.length;
+       if(app.year == '2018'){
+       return app.name + ' ' + app.year;
+     }
+       else
+       if(app.year == '2017'){
+       return app.name +' '+ app.year;
+     }
+       
+   })
+        );
+  
+   var appNamesCount = appList.length;
    print("count : ${appNamesCount}");
+
+  
 
 }
 
-   
+
+
+class AppOfTheYear {
+  String name;
+  String year;
+  
+
+  AppOfTheYear({required this.name, required this.year});
+}
